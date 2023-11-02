@@ -39,6 +39,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(800, 450);
             this.pictureBox1.TabIndex = 0;
@@ -51,7 +52,8 @@
             this.Btn_mstart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_mstart.Font = new System.Drawing.Font("맑은 고딕", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Btn_mstart.Image = ((System.Drawing.Image)(resources.GetObject("Btn_mstart.Image")));
-            this.Btn_mstart.Location = new System.Drawing.Point(483, 34);
+            this.Btn_mstart.Location = new System.Drawing.Point(423, 27);
+            this.Btn_mstart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_mstart.Name = "Btn_mstart";
             this.Btn_mstart.Size = new System.Drawing.Size(60, 60);
             this.Btn_mstart.TabIndex = 1;
@@ -64,7 +66,8 @@
             this.Btn_vstart.FlatAppearance.BorderSize = 0;
             this.Btn_vstart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_vstart.Image = ((System.Drawing.Image)(resources.GetObject("Btn_vstart.Image")));
-            this.Btn_vstart.Location = new System.Drawing.Point(396, 34);
+            this.Btn_vstart.Location = new System.Drawing.Point(346, 27);
+            this.Btn_vstart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_vstart.Name = "Btn_vstart";
             this.Btn_vstart.Size = new System.Drawing.Size(60, 60);
             this.Btn_vstart.TabIndex = 2;
@@ -73,13 +76,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(799, 449);
             this.Controls.Add(this.Btn_vstart);
             this.Controls.Add(this.Btn_mstart);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "MapleStory";
             this.Load += new System.EventHandler(this.Form1_Load);
