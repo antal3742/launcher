@@ -27,6 +27,41 @@ namespace launcher
 
         }
 
+        public string ReadRegistryValue(string keyPath, string valueName) // 레지스트리 읽기
+        {
+            try
+            {
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyPath))
+                {
+                    if (key != null)
+                    {
+                        Object val = key.GetValue(valueName);
+                        if (val != null)
+                        {
+                            return val.ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+
+            return null;
+        }
+
+        public void CreateShortcut(string shortcutpath, string targetpath, string startInPath) // 바로가기 생성
+        {
+            WshShell shell = new WshShell();
+            IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutpath);
+
+            shortcut.TargetPath = targetpath;
+            shortcut.WorkingDirectory = startInPath;
+            shortcut.Save();
+
+        }
+
         private void Btn_mstart_Click(object sender, EventArgs e)
         {
             string keyPath = @"SOFTWARE\WOW6432Node\Wizet\Maple";
